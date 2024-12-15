@@ -128,7 +128,7 @@ exports.deleteBlogController = async (req,res) => {
       .populate("user");
       await blog.user.blogs.pull(blog);
       await blog.user.save();
-       return res.status(200).send({
+       return res.status(200).send({//sdja
         success:true,
         message:"Blog Deleted!",
        });
